@@ -1,0 +1,1118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600;800&display=swap" rel="stylesheet">
+<style>
+
+body {
+font-family:'Baloo Da 2';	
+}
+
+#toybg {	
+background:url(flipped.jpg);
+background-position: center;	
+background-repeat: no-repeat;
+background-size:contain;
+width:100%;
+height:600px;
+}
+
+.key {
+float:left;	
+display:inline;	
+width:15px;
+height:auto;
+background:grey;
+border:solid black 2px;
+border-radius:2px;
+margin:4px;
+font-size:12px;
+text-align:center;
+font-weight:500;
+line-height: 10px;
+}
+
+button {
+    border: none;
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    background:inherit;
+    color:inherit;
+    font-family:inherit;
+    font-size:inherit;
+    cursor: pointer;
+    text-align:inherit;
+    line-height: inherit;
+    height:inherit;
+}
+
+
+#keys-left {	
+width:250px;
+height:300px;
+ position: absolute;
+  z-index: 15;
+  top:270px;
+  left:50%;
+  margin: -100px 0 0 -125px;
+}
+
+
+#keys-right {
+width:250px;
+height:300px;	
+ position: absolute;
+  z-index: 15;
+  top:450px;
+  left:50%;
+  margin: -100px 0 0 -125px;
+}
+
+.highlighted:hover {
+background:#ff8c1a;
+cursor:pointer;	
+}
+
+button .active {
+background:#ffb366;
+cursor:pointer;	
+}
+
+.highlighted {
+background:#ffb366;	
+}
+
+#row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10 {
+clear:both;	
+display:block;	
+margin-left:24%;
+}   
+
+.pressed {
+background:#ffd9b3;
+cursor:pointer;	
+-webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+-moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+ box-shadow: inset 0px 0px 5px #c1c1c1;
+ outline: none;	
+  transition: 0.3s;
+}
+
+#languages  {
+column-count: 3
+}
+
+input {
+float:none;	
+display:block;
+   /*opacity: 0;
+    width: 0;
+    height: 0;
+    */
+cursor:pointer;
+width:30%;
+}
+
+#languages {	
+position: absolute;	
+float:left;	
+width:60%;	
+margin:0px;
+margin-top:-330px;
+}
+
+#languages span {
+font-size:6px;	
+display:block;
+margin-bottom:15px;
+line-height:10px;
+}
+
+
+@media screen and (min-width:300px) {
+#languages {	
+margin-top:-142%;
+}
+}	
+
+@media screen and (min-width:330px) {
+.key {
+width:25px;	
+}
+
+#keys-left {	
+width:300px;
+height:300px;
+ position: absolute;
+  z-index: 15;
+  top:270px;
+  left:50%;
+  margin: -100px 0 0 -150px;
+}
+
+
+#keys-right {
+width:300px;
+height:300px;	
+ position: absolute;
+  z-index: 15;
+  top:450px;
+  left:50%;
+  margin: -100px 0 0 -150px;
+}
+
+#languages {	
+margin-top:-130%;
+}
+
+}	
+
+
+@media screen and (min-width:720px) {
+.key {
+width:25px;
+min-height:20px;	
+line-height: 20px;
+}
+
+
+#keys-left {	
+width:350px;
+height:300px;
+  top:220px;
+  left:50%;
+  margin: -100px 0 0 -175px;
+}
+
+
+#keys-right {
+width:350px;
+height:300px;	
+  top:450px;
+  left:50%;
+  margin: -100px 0 0 -175px;
+}
+
+#languages {	
+margin-top:-125%;
+}
+
+}
+
+
+@media screen and (min-width:1200px) {
+
+#wrapper {
+width:75%;
+margin:auto;	
+}
+
+#toybg {	
+margin-left:2.5%;	
+background:url(1F8F9592-5179-4416-93AC-C36E462587E5.jpg);	
+background-position: 0px 50px;
+background-repeat: no-repeat;
+background-size:100%;
+width:100%;
+height:800px;
+}
+
+.key {
+width:40px;
+height:40px;
+line-height:40px;
+font-size:32px;
+}
+
+#keys-left {	
+float:left;	
+width:55%;
+height:500px;
+ position: absolute;
+  z-index: 15;
+  top:0%;
+  left:50%;
+  margin: 14% 0 0 -25%;
+}
+
+
+#keys-right {
+float:right;	
+width:45%;
+height:500px;	
+ position: relative;
+  z-index: 15;
+  top:30%;
+  right:50%;
+  margin: 18% 50% 0 0%;
+}
+
+#row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10 {
+clear:both;	
+display:block;	
+margin-left:0%;
+}  
+
+.highlighted {
+min-height:45px;
+}
+
+
+.languagebtns {
+float:right;	
+position:absolute;	
+margin-top:0%;
+width:70px;
+z-index:100;
+margin-top:-175px;
+left:96%;
+margin: -175px 0 0 -24%;
+}
+
+
+input {
+position:absolute;	
+float:right;	
+display:block;
+   /*opacity: 0;
+    width: 0;
+    height: 0;
+    */
+cursor:pointer;
+margin-top:0px;
+margin-left:50px;
+}
+
+
+#languages span {
+font-size:14px;	
+display:block;
+margin-bottom:15px;
+line-height:16px;
+}
+
+input {
+float:right;	
+display:block;
+   /*opacity: 0;
+    width: 0;
+    height: 0;
+    */
+cursor:pointer;
+width:30%;
+}
+
+
+#languages {	
+column-count: 1;	
+position: absolute;	
+float:left;	
+width:100%;	
+margin:0px;
+}
+
+#languages span {
+font-size:13px;	
+display:block;
+margin-bottom:15px;
+line-height:15px;
+}
+}	
+
+
+
+
+@media screen and (min-width:1300px) { 
+
+.key {
+width:3.4vw;
+height:auto;	
+min-height: 50px;
+line-height:50px;
+}
+
+}
+}	
+
+
+
+
+</style>
+</head>
+
+
+<body>
+<div id ="wrapper">
+	<div id = "toy">
+		<div id ="toybg">
+				<div id = "toytxt">
+					<div id ="keys-left">
+						<div id = "row1">
+							<div class = "key">A</div>
+							<div class = "key">B</div>
+							<button id ="cbutton" class = "key highlighted">C</button>
+							<div class = "key">D</div>
+							<div class = "key">E</div>
+						</div>
+						<div id = "row3">
+							<div class = "key">J</div>
+							<div class = "key">K</div>
+							<button id ="lbutton" class = "key highlighted">L</button>
+							<div class = "key">M</div>
+							<div class = "key">N</div>
+						</div>
+						<div id ="row5">
+							<div class = "key">S</div>
+							<div class = "key">U</div>
+							<div class = "key">V</div>
+							<div class = "key">W</div>
+						</div>
+						<div id ="row7">
+							<div class = "key">1</div>
+							<div class = "key">2</div>
+							<div class = "key">3</div>
+							<div class = "key">4</div>
+							<div class = "key">5</div>
+					</div>
+						<div id ="row8">
+							<div class = "key">6</div>
+							<div class = "key">7</div>
+							<div class = "key">8</div>
+							<div class = "key">9</div>
+							<div class = "key">10</div>
+					</div>
+					</div>
+				<div id ="keys-right">
+						<div id = "row2">
+							<div class = "key">F</div>
+							<div class = "key">G</div>
+							<div class = "key">H</div>
+							<div class = "key">I</div>
+						</div>
+						
+						<div id ="row4">
+							<div class = "key">O</div>
+							<div class = "key">P</div>
+							<div class = "key">Q</div>
+							<div class = "key">R</div>
+						</div>
+						<div id ="row6">
+							<div class = "key">T</div>
+							<div class = "key">X</div>
+							<div class = "key">Y</div>
+							<div class = "key">Z</div>
+					</div>
+						<div id ="row9">
+							<div class = "key">11</div>
+							<div class = "key">12</div>
+							<button id ="thirteenbutton" class = "key highlighted">13</button>
+							<div class = "key">14</div>
+							<div class = "key">15</div>
+					</div>
+					<div id ="row10">
+							<div class = "key">16</div>
+							<div class = "key">17</div>
+							<button id = "eighteenbutton" class = "key highlighted">18</button>
+							<div class = "key">19</div>
+							<div class = "key">20</div>
+							<div class="languagebtns">
+					<div id = "languages">
+					<input type="radio" name="radio" id="igbo" checked="checked" value="igbo"><span>English<br>Igbo</span>
+					<input type="radio" name="radio" id="yoruba" value="yoruba"><span>English<br>Yoruba</span>
+					<input type="radio" name="radio" id="hausa" value="hausa"><span>English<br>Hausa</span>
+					</div>
+					</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+var audioIgbo = [];
+audioIgbo[0] = new Audio("C Eng-Igbo.mp3"); //replace ("my new audio.mp3")
+audioIgbo[1] = new Audio("L Eng-Igb.mp3");  //replace ("my new audio.mp3")
+audioIgbo[2] = new Audio("13 Eng-Igb.mp3");  //replace ("my new audio.mp3")
+audioIgbo[3] = new Audio("18 Eng-Igb.mp3");  //replace ("my new audio.mp3")
+
+var audioYoruba = []
+audioYoruba[0] = new Audio ("C Eng-Yor.mp3"); //replace ("my new audio.mp3")
+audioYoruba [1] = new Audio ("L Eng-Yor.mp3"); //replace ("my new audio.mp3")
+audioYoruba[2] = new Audio ("13 Eng-Yor.mp3"); //replace ("my new audio.mp3")
+audioYoruba [3] = new Audio ("18 Eng-Yor.mp3"); //replace ("my new audio.mp3")
+
+var audioHausa = [];
+audioHausa[0] = new Audio ("C Eng-Hau.mp3"); //replace ("my new audio.mp3")
+audioHausa[1] = new Audio ("L Eng-Hau.mp3"); //replace ("my new audio.mp3")
+audioHausa[2] = new Audio ("13 Eng-Hau.mp3"); //replace ("my new audio.mp3")
+audioHausa[3] = new Audio ("18 Eng-Hau.mp3"); //replace ("my new audio.mp3")
+
+
+var x = document.getElementById("cbutton"); 
+var y = document.getElementById("lbutton");
+var w = document.getElementById("eighteenbutton"); 
+var v = document.getElementById("thirteenbutton");  
+
+
+//Default
+
+	for (var i = 0; i < audioIgbo.length; i++) {
+        audioIgbo[i].addEventListener("click", bindClick(i));
+       } 
+
+       function bindClick(i) {
+
+
+	       	cbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[0].play();
+
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       		lbutton.classList.remove("pressed");
+
+				thirteenbutton.classList.remove("pressed");
+
+				eighteenbutton.classList.remove("pressed");
+
+
+	       	});
+
+	       	 	lbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[1].play();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       		cbutton.classList.remove("pressed");
+
+				thirteenbutton.classList.remove("pressed");
+
+				eighteenbutton.classList.remove("pressed");
+
+
+
+	       	});
+
+	       	 	thirteenbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[2].play();
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[3].pause();
+
+	       		
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+
+	       		cbutton.classList.remove("pressed");
+
+				lbutton.classList.remove("pressed");
+
+				eighteenbutton.classList.remove("pressed");
+
+	       	});
+
+
+	       	 	eighteenbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[3].play();
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       		cbutton.classList.remove("pressed");
+
+				lbutton.classList.remove("pressed");
+
+				thirteenbutton.classList.remove("pressed");
+
+	       	});
+
+
+	       	audioIgbo[i].addEventListener('play', function() {
+
+
+
+		       	if(audioIgbo[0].paused !== true) {
+
+		       	cbutton.classList.add("pressed");
+
+		       	}
+
+
+				else if (audioIgbo[1].paused !== true) {
+
+				lbutton.classList.add("pressed");
+			}
+
+				else if (audioIgbo[2].paused !== true) {
+
+				thirteenbutton.classList.add("pressed");
+			}
+
+
+				else if (audioIgbo[3].paused !== true) {
+
+				eighteenbutton.classList.add("pressed");
+			}
+
+
+			});
+
+
+			audioIgbo[i].addEventListener('pause', function() {
+
+		    audioIgbo[i].currentTime = 0;
+
+		    });
+
+
+			audioIgbo[i].addEventListener('ended', function() {
+
+			cbutton.classList.remove("pressed");
+
+			lbutton.classList.remove("pressed");
+
+			thirteenbutton.classList.remove("pressed");
+
+			eighteenbutton.classList.remove("pressed");
+
+			});
+}
+
+
+
+
+
+//Igbo
+
+
+var igbo = document.getElementById("igbo");
+
+igbo.addEventListener('click', function() {
+	
+	if (event.target && event.target.matches("input[type='radio']")) {
+
+	for (var i = 0; i < audioIgbo.length; i++) {
+        audioIgbo[i].addEventListener("click", bindClickI(i));
+       } 
+
+       		
+   	//muteCurrent();	
+
+       function bindClickI(i) {
+
+	       	cbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[0].play();
+
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       		lbutton.classList.remove("pressed");
+
+				eighteenbutton.classList.remove("pressed");
+
+				thirteenbutton.classList.remove("pressed");
+
+
+	       	});
+
+	       	 	lbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[1].play();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       		cbutton.classList.remove("pressed");
+
+				eighteenbutton.classList.remove("pressed");
+
+				thirteenbutton.classList.remove("pressed");
+
+	       	});
+
+
+   	 	thirteenbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[2].play();
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[3].pause();
+
+	       		
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       	});
+
+
+	       	 	eighteenbutton.addEventListener('click', function() {	
+
+	       		audioIgbo[3].play();
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       	});
+
+
+	       	audioIgbo[i].addEventListener('play', function() {
+
+
+		       	if(audioIgbo[0].paused !== true) {
+
+		       	cbutton.classList.add("pressed");
+
+		       	}
+
+				else if (audioIgbo[1].paused !== true) {
+
+				lbutton.classList.add("pressed");
+			}
+
+				else if (audioIgbo[2].paused !== true) {
+
+				thirteenbutton.classList.add("pressed");
+			}
+
+
+				else if (audioIgbo[3].paused !== true) {
+
+				eighteenbutton.classList.add("pressed");
+			}
+
+
+			});
+
+
+			audioIgbo[i].addEventListener('pause', function() {
+
+		    audioIgbo[i].currentTime = 0;
+
+		    });
+
+
+			audioIgbo[i].addEventListener('ended', function() {
+
+			cbutton.classList.remove("pressed");
+
+			lbutton.classList.remove("pressed");
+
+			thirteenbutton.classList.remove("pressed");
+
+			eighteenbutton.classList.remove("pressed");
+
+			});
+}
+}
+		});
+
+
+
+//Yoruba
+
+var yoruba = document.getElementById("yoruba");
+
+yoruba.addEventListener('click', function() {
+	
+	if (event.target && event.target.matches("input[type='radio']")) {
+
+	for (var i = 0; i < audioYoruba.length; i++) {
+        audioYoruba[i].addEventListener("click", bindClickY(i));
+       } 
+
+
+ 	//muteCurrent();	
+
+
+       function bindClickY(i) {
+
+	       	cbutton.addEventListener('click', function() {	
+
+	       		audioYoruba[0].play();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       	});
+
+	       	 	lbutton.addEventListener('click', function() {	
+
+
+	       		audioYoruba[1].play();  		
+	       		audioYoruba[0].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+	       	});
+
+	       	 	thirteenbutton.addEventListener('click', function() {	
+
+	       	
+	       		audioYoruba[2].play();  		
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[3].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       	});
+
+
+	       	 	eighteenbutton.addEventListener('click', function() {	
+
+	       	
+	       		audioYoruba[3].play();  		
+	       		audioYoruba[0].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[1].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+
+	       	});
+
+
+	       	audioYoruba[i].addEventListener('play', function() {
+
+
+		       	if(audioYoruba[0].paused !== true) {
+
+		       	cbutton.classList.add("pressed");
+
+		       	}
+
+				else if (audioYoruba[1].paused !== true) {
+
+				lbutton.classList.add("pressed");
+
+				}
+
+				else if (audioYoruba[2].paused !== true) {
+
+				thirteenbutton.classList.add("pressed");
+				
+				}
+
+				else if (audioYoruba[3].paused !== true) {
+
+				eighteenbutton.classList.add("pressed");
+			}
+
+
+
+			});
+
+
+
+  			audioYoruba[i].addEventListener('pause', function() {
+
+		       	audioYoruba[i].currentTime = 0;
+		    });
+
+
+
+			audioYoruba[i].addEventListener('ended', function() {
+
+			cbutton.classList.remove("pressed");
+
+			lbutton.classList.remove("pressed");
+
+			thirteenbutton.classList.remove("pressed");
+
+			eighteenbutton.classList.remove("pressed");
+
+			});
+}
+}
+		});
+
+
+
+//Hausa
+
+var hausa = document.getElementById("hausa");
+
+hausa.addEventListener('click', function() {
+	
+	if (event.target && event.target.matches("input[type='radio']")) {
+
+	for (var i = 0; i < audioHausa.length; i++) {
+        audioHausa[i].addEventListener("click", bindClickH(i));
+       } 
+
+       //muteCurrent();	
+
+       function bindClickH(i) {
+
+	       	cbutton.addEventListener('click', function() {	
+
+	       		audioHausa[0].play();
+	       		audioHausa[1].pause();
+	       		audioIgbo[0].pause();
+	       		audioYoruba[0].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       	});
+
+	       	 	lbutton.addEventListener('click', function() {	
+	       	
+	       		audioHausa[1].play();
+	       		audioHausa[0].pause();
+	       		audioHausa[2].pause();
+	       		audioHausa[3].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+
+       	//cbutton.classList.remove("pressed");
+
+		
+		//lbutton.classList.remove("pressed");
+
+	       	});
+
+      		thirteenbutton.addEventListener('click', function() {	
+
+	       		audioHausa[2].play();
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[3].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		});
+
+
+      		eighteenbutton.addEventListener('click', function() {	
+
+	       		audioHausa[3].play();
+	       		audioHausa[0].pause();
+	       		audioHausa[1].pause();
+	       		audioHausa[2].pause();
+
+	       		audioIgbo[0].pause();
+	       		audioIgbo[1].pause();
+	       		audioIgbo[2].pause();
+	       		audioIgbo[3].pause();
+
+	       		audioYoruba[0].pause();
+	       		audioYoruba[1].pause();
+	       		audioYoruba[2].pause();
+	       		audioYoruba[3].pause();
+
+	       		});
+
+
+
+
+	       	 	audioHausa[i].addEventListener('play', function() {
+
+
+		       	if(audioHausa[0].paused !== true) {
+
+		       	cbutton.classList.add("pressed");
+
+		       	}
+
+				else if (audioHausa[1].paused !== true) {
+
+				lbutton.classList.add("pressed");
+			}
+
+				else if (audioHausa[2].paused !== true) {
+
+				thirteenbutton.classList.add("pressed");
+			}
+
+				else if (audioHausa[3].paused !== true) {
+
+				eighteenbutton.classList.add("pressed");
+			}
+
+			});
+
+
+  			audioHausa[i].addEventListener('pause', function() {
+
+		       	audioHausa[i].currentTime = 0;
+		    });
+
+
+			audioHausa[i].addEventListener('ended', function() {
+
+			cbutton.classList.remove("pressed");
+
+			lbutton.classList.remove("pressed");
+
+			thirteenbutton.classList.remove("pressed");
+
+			eighteenbutton.classList.remove("pressed");
+
+			});
+}
+}
+		});
+
+		
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
